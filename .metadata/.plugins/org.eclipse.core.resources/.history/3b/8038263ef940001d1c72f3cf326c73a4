@@ -1,0 +1,14 @@
+package com.ciandt.people.bootcamp.cleanarch.domain.exception;
+
+public class LutadorNotFoundException extends RuntimeException {
+
+	private String nome;
+	
+    public LutadorNotFoundException(Long id) {
+        super("Não foi possível achar o lutador com id: " + id);
+    }
+
+	public LutadorNotFoundException(String nome) {
+		super("Não foi possível achar o lutador com nome: " + nome);
+	}
+}
